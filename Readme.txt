@@ -1,6 +1,4 @@
-Thanks for downloading this template!
+A quick template for your web 
+with all migrations and urls attached 
 
-Template Name: Selecao
-Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Django web framework 
