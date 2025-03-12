@@ -11,32 +11,32 @@ def counter(request):
     return render(request, 'counter.html')
 
 def register(request):
-    #if request.method == 'POST':
-    #    username = request.POST['username']
-    #    email = request.POST['email']
-    #    password = request.POST['password']
-    #    password = request.POST['password2']
-#
-#
-    #    if password = password2:
-    #        if User.objects.filter(username=username).exists():
-    #            message.info(request, 'Username already used')
-    #            return redirect('register')
-#
-    #        elif User.objects.filter(email=email).exists():
-    #            message.info(request, 'Email already used')
-    #            return redirect('register')
-#
-    #        else:
-    #            User.Objects.create(usernamae=username, email=email, password=password)
-    #            user.save()
-    #            return redirect('login')
-#
-    #    else:
-    #        message.info(request, 'Password not the same')
-    #        return redirect('register')
-#
-    #else:
+    if request.method == 'POST':
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+        password = request.POST['password2']
+
+
+        if password = password2:
+            if User.objects.filter(username=username).exists():
+                message.info(request, 'Username already used')
+                return redirect('register')
+
+            elif User.objects.filter(email=email).exists():
+                message.info(request, 'Email already used')
+                return redirect('register')
+
+            else:
+                User.Objects.create(usernamae=username, email=email, password=password)
+                user.save()
+                return redirect('login')
+
+        else:
+            message.info(request, 'Password not the same')
+            return redirect('register')
+
+    else:
     return render(request, 'register.html')
 
 def login(request):
