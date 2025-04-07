@@ -66,8 +66,3 @@ def site(request):
 
     else:
         return render(request, 'site.html')
-
- 
-
-
-
